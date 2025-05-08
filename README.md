@@ -260,7 +260,7 @@ While Israel’s role in the war evolved—from victim of terror attacks to acti
 
 ### 2.4 Temporal Evolution of Blame
 
-![Figure 3: Timeline Overview](INSERT_IMAGE_PATH_HERE)  
+![Figure 3: Timeline Overview](https://github.com/robinmadani/gaza-research-project/blob/main/figure%203_attribution%20analysis.png)  
 #### Figure 3
 ![Figure 4](INSERT_IMAGE_PATH_HERE) 
 #### Figure 4
