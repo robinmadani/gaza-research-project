@@ -1,32 +1,34 @@
-### Authors: Lilith Springer, Raffael Kögel, Clara Burkhardt, Robin Madani, Charlotte Scheufens 
+# Examining Bias within German News Reporting on Gaza
 
-# Abstract
+#### Authors: Lilith Springer, Raffael Kögel, Clara Burkhardt, Robin Madani, Charlotte Scheufens 
+
+## Abstract
 Since the Hamas attack on October 7, 2023, Israel’s military response in Gaza has resulted in tens of thousands of Palestinian deaths and mass displacement. Despite the scale of the violence, German media has faced criticism for showing bias in favor of Israel and minimizing Palestinian suffering—what has been described by some scholars as selective empathy. This study analyzes how Germany’s leading newspapers reported on the conflict between October 2023 and March 2025. Using BERT-based topic modeling and attribution analysis, we examined both thematic focus and patterns of blame across outlets. While surface coverage was similar across sources, deeper linguistic framing diverged significantly along ideological lines. Conservative papers emphasized security and international actors, while left-leaning outlets focused more on humanitarian consequences. All newspapers attributed substantial blame to Israel, however, this is mainly due to limitations in the programming language in understanding when criticism is directly voiced versus indirectly cited. Nevertheless; our findings aim to contribute to scholarly findings on how media narratives shape public understanding, especially in times of crisis.
 
-# Research Question
+## Research Question
 How has German media reported on the Israel-Hamas war since the 7th of October, 2023, and to what extent has the political orientation of selected news sources influenced their reporting on the war?  
 
-# Background 
+## Background 
 Since the Hamas terror attacks on the 7th of October 2023 killing approximately 1.400 Israelis, Israel has killed more than 46.600 Palestinians living in Gaza, among them more than 17.000 children (Mey, 2025; Amnesty International, 2024). At least 1.9 million people were forcibly displaced under inhumane and unsafe conditions (Mey 2025). These numbers were estimated by Amnesty International in January 2025 with thousands of casualties following since. On the 5th of May, the Israeli Cabinet approved plans to expand its military offensive and capture all of Gaza, a decision that follows numerous statements by Israeli officials and prime minister Netanyahu dehumanizing Palestinian civilians and showing intent to kill and cause severe bodily and mental harm. Meanwhile, Israel continues to block humanitarian corridors into Gaza and repeatedly attacks humanitarian aid workers, medical personnel, UN personnel, and journalists - a clear violation of humanitarian law. On the 29th of December 2023, South Africa opened a case against Israel at the International Court of Justice (ICJ) on allegations of genocide against the Palestinian population. Since then numerous reputable international organisations, including Amnesty International, Human Rights Watch and Medico International, accused Israel of committing genocide. In November 2024, the International Criminal Court (ICC), issued arrest warrants against Netanyahu and former Israeli defense minister Yoav Gallant, on allegations of war crimes and crimes against humanity. 
 
 Despite the brutality and severity of the Israeli attacks on Gaza, German Media has long abstained from voicing criticism. Different commentaries and reports highlight that German Media shows bias in favour of Israel and and fails to mention civilian Palestinian casualties or to condemn Israel’s actions (Abdelaty, 2025; Mey, 2025; Schneider, 2025) . This is what some authors frame as selective empathy: Focus lies on the victims of the Hamas attacks, while the victims of Israel’s genocide are denied visibility (Mey, 2025). On the 8th of April 2025, 60 German journalists published an open letter criticising double standards in treating Palestinian versus Israeli sources and said that they refrained from criticizing Israel over fears it could be perceived as antisemitism (Schneider, 2025).  This corresponds to the findings of an independent survey conducted in August 2024 showing that half of the German population had lost trust in German Media reporting on the Israel-Gaza conflict (Brandenburg & Mahdhaoui, 2024) . 
 
 The narratives constructed by the Media are essential in shaping how we perceive events because they provide the primary lens through which most people understand complex realities beyond their direct experience. By selecting which facts to highlight, which voices to amplify, and how to frame issues, the media does more than report—it interprets. This framing influences not only what the public sees as important, but also how they emotionally and morally respond to it (Abdelaty, 2025). Whether a conflict is portrayed as an act of self-defense or aggression, whether a group is depicted as victims or perpetrators, or whether responsibility is framed as individual or systemic—all of these choices guide public perception and debate. As a result, media narratives play a foundational role in shaping societal attitudes, political opinions, and even policy outcomes (Abdelaty, 2025).
 
-# Our Approach
+## Our Approach
 We wanted to understand how biased German media reporting actually is and decided to do an analysis looking at all news articles published by the largest German Media outlets between the 7th of October 2023 and the 31st of March 2025. We selected our samples based on the number of circulation of daily prints. In Germany, print Media still plays a significant role, with over 350 newspapers reaching 71.4 percent of the German population (deutschland.de). The five German newspapers with the highest number of circulation and national readership are the „Süddeutsche Zeitung“ (430.000 prints/day), the „Frankfurter Allgemeine Zeitung“  (368.000 prints/day), the „Welt“ (264.000 prints/day), the „Frankfurter Rundschau“ (150.000 prints/day), and the „tageszeitung“ (56.000 prints/day) (deutschland.de). We scraped articles for the above mentioned sources in the selected time frame from Factiva using the following search string:
 
 gaza AND ("naher osten" OR palästina OR israel) AND (krieg* OR konflikt* OR offensive* OR angriff* OR eskalat* OR gewalt* OR bombardier* OR rakete* OR blockade* OR belager* OR "militärische operation" OR beschuss OR luftschlag* OR invasion* OR "humanitäre krise" OR todesopfer* OR verletz* OR zivilist* OR flüchtling* OR hilfe* OR völkerrecht OR menschenrecht OR kriegsverbrechen OR icc OR "internationaler strafgerichtshof" OR uno OR genozid OR netanjahu OR hamas OR idf)
 
 The string includes all words associated with Israel and Gaza and conflict to optimize our data sample and exclude articles irrelevant to our analysis. Unfortunately, we did not succeed in scraping articles from the „Frankfurter Allgemeine Zeitung“, the second most read newspaper in Germany due to copyright protections. Therefore, we decided to include the largest German tabloid “BILD” which has a circulation of 3.3 million prints/day (deutschland.de) and features, among other things, a section on daily news. Since the selected newspapers broadly represent the political spectrum in Germany, we were furthermore interested in comparing narratives on the Israel-Gaza conflict (genocide) between sources.  The „tageszeitung“ is a left-wing newspaper, known for being critical of the political system, the „Süddeutsche Zeitung“ and the „Frankfurter Rundschau“ are considered left-liberal with the  „Süddeutsche Zeitung“ showing a more neoliberal stance on economics, the „Welt“ is politically conservative and has an older target audience, and the “BILD” is also considered conservative but has often been criticized for populist language. It is noteworthy that both the “BILD” and the “Welt” are owned by the Axel-Springer Verlag, the largest Media conglomerate in Germany, whose mission statement is based on five fundamental principles, one of which reads: “We support the Jewish population and the State of Israel’s right to existence.” (translated from German: "Wir unterstützen das jüdische Volk und das Existenzrecht des Staates Israel.") (Brandenburg & Mahdhaoui, 2024).  Overall, the “tageszeitung” and the „Süddeutsche Zeitung“ are cited for taking a more critical stance on the conflict (Mey, 2025) - specifically the “tageszeitung” - while all other newspapers have received frequent criticism for biased reporting. Notwithstanding previous reports, we took a neutral approach in our analysis trying to understand the main topics that feature in relation to the Israel-Gaza conflict using BERT for topic modelling and who is most frequently being blamed or criticised in the context of the ongoing conflict (genocide) by the newspapers using attribution analysis. The following sections will outline our methodologies in greater detail, followed by the analysis of our results. 
 
-# Part 1 - Volume, Keyword and Contextual Analysis
+## Part 1 - Volume, Keyword and Contextual Analysis
 
-## Objective
+### Objective
 
 The objective of our volume, keyword, and contextual analysis is to determine how, and to what extent, different news outlets have reported on specific topics, as well as to identify the words that commonly appear in connection with these topics. This analysis serves as a foundation for understanding the contextual usage of keywords throughout our study. At this stage, the analysis does not yet allow for a precise interpretation of the semantic relationships between keywords and their context. However, it does reveal the underlying linguistic narratives through which specific topics are presented.
 
-## Methodology
+### Methodology
 
 Article Volume and Trend by Source: In a first step, the reporting activity of individual news outlets is visualized over time using a line chart broken down by month. This allows for the analysis of both the volume and trend of coverage across the given time period.  
 artikel_pro_monat = df.resample('M').size()  
@@ -45,15 +47,15 @@ These terms were selected because their usage can serve as an early indicator of
 Contextual Analysis - Entity Context Window Analysis: In the final step, we analyzed which nouns and proper nouns appear immediately before and after the term Genozid (Genocide) and the conflict parties in the Gaza conflict, within articles from each news outlet. The choice of these entities is explained in Part 2 of the analysis. Using spaCy (*spacy.load('de_core_news_sm')*), we first extracted all nouns from the articles. We then searched for the target word (*genozid*) and collected the surrounding nouns within a context window of five words:  *kontext_fenster = 5*, *kontext = all_tokens[start:i] + all_tokens[i+1:end]*. Frequencies of these contextual nouns were counted using Python’s *Counter*, and the top 10 most common ones were visualized in a word cloud.       
 We used the term Genocide to analyze the surrounding context in which it is discussed, whether it appears alongside more critical or accusatory nouns, or in reference to historical events. Similarly, we examined the main entities involved in the Gaza conflict to assess whether they are reported in proximity to more violent, war-related, or emotionally charged language. This helps reveal how different parties are linguistically framed across news coverage.
 
-## Limitations 
+### Limitations 
 
 Several limitations affected the implementation and scope of this analysis. First, paragraph-level topic modelling could not be completed due to extremely long processing times, which made it infeasible to run the code successfully. Since individual paragraphs often address specific subtopics, this limitation may have introduced inaccuracies in our article-level modelling approach. Second, the newspaper BILD contributed significantly fewer articles within the analyzed time frame. This data imbalance may have led to less reliable results for this outlet, particularly in the topic modelling and contextual analysis. Additionally, certain entities such as UNRWA and ICC were mentioned too infrequently to allow for meaningful interpretation of their linguistic context. Finally, due to unresolved technical errors, most parts of the analysis, except for the overall topic modelling, had to be conducted in separate Colab notebooks and using separate files. This fragmentation limited the possibility of a fully integrated codebase for the project.  
 
 ➡️ The code for this analysis can be found here: [Die Welt](https://colab.research.google.com/drive/1MOf7UY0OCUE8bo4rF4Lp9Dp4Y1GcIqrg?usp=sharing), [Süddeutsche Zeitung](https://colab.research.google.com/drive/1SPNVgH4ZnG-c_04862AXoMqtfc83DV36?usp=sharing), [Frankfurter Rundschau](https://colab.research.google.com/drive/1o_ecsPKQshnxAJPMD6UVNyaRfyMXewYj?usp=sharing), [taz - die Tageszeitung](https://colab.research.google.com/drive/1Hg9dCq400P4VuCtbPe6r84y4t9I3_p-1?usp=sharing), [topic modelling all sources](https://colab.research.google.com/drive/1-XCnxfuFwjOTTcox3lyiCu2-k-FMxdxi?usp=sharing)
 
-## Discussion of Results
+### Discussion of Results
 
-### 1. Article Volume and Trend by Source
+#### 1. Article Volume and Trend by Source
 
 To examine the extent of media coverage concerning the overlying issue, it is useful to carry out an analysis of the article volume and trends by the individual news sources. 
 
@@ -61,9 +63,9 @@ To examine the extent of media coverage concerning the overlying issue, it is us
 
 The analysis above demonstrates that no individual media outlet represents a significant outlier in its trend of coverage concerning the conflict. Throughout the entire time period observed, the tabloid BILD has reported the least, while the Süddeutsche Zeitung has consistently covered the issue most extensively, closely followed by the taz. There was a small but visible peak of coverage following the request for an ICC arrest warrant for PM Netanyahu in May 2024 within all sources except the Süddeutsche Zeitung, and again a negligible increase in coverage following the anniversary of the start of the conflict. Concerning the latter, only the Süddeutsche Zeitung and Frankfurter Rundschau seemed to increase their coverage until January 2025, when the article volume reached another peak, but has not picked up significantly during South Africa’s application to the ICJ, arguing for an existence of a Genocide carried out by the Israel. Interestingly, all five news sources already exhibit a very steep decline in coverage a month after the October 7th attacks, and fluctuated around an approximately equally low level throughout the following year. All in all, while differing in general volume of coverage, the different news sources follow very similar trends, suggesting they were all objectively influenced by general events and do not display individual shifts in incident-related attitudes or priorities. 
 
-### 2. Topic Modelling - Individual and Collective Analysis
+#### 2. Topic Modelling - Individual and Collective Analysis
 
-#### A. Article - Level Topic Modelling by Source
+##### A. Article - Level Topic Modelling by Source
 
 In the first step, 20 topics were generated for each news outlet using article-level topic modelling. The results are presented in the following section, starting with the most conservative newspaper and proceeding toward the more leftist and system-critical ones—concluding with BILD, which is treated separately as a tabloid outlet.
 
@@ -97,7 +99,7 @@ BILD
 
 A notable pattern in BILD’s coverage is the frequent inclusion of the topic of terrorism, a term with strong linguistic and emotional connotations, aligning with the paper’s characteristic tone. This framing often appears in connection with the term hostages, which may suggest an implicit condemnation of Hamas’ actions. Additionally, it is striking that in most topics related to the Gaza conflict, either Germany or Berlin appears prominently, indicating that BILD linguistically frames the German state as highly involved in the conflict. In the case of BILD, we limited our analysis to only 10 topics. This decision was due to the significantly lower number of published articles compared to the other outlets, which meant that generating a full set of 20 meaningful and distinct topics was not feasible. 
 
-#### B. Collective Topic Modelling - Weights Analysis per Topic
+##### B. Collective Topic Modelling - Weights Analysis per Topic
 
 As a second step, we conducted a cross-outlet topic analysis based on the merged dataset. By calculating the average topic distributions per source, we aimed to identify thematic differences in coverage across media outlets.
 
@@ -125,7 +127,7 @@ Topic 19
 
 Topic 19 is characterized by the frequent co-occurrence of terms such as Iran, regime, land, Tehran, Hizbollah, Lebanon. As in the previous case, conservative news outlets score higher here as well. This observation aligns with the findings from the earlier analysis, where it was shown that these outlets place greater emphasis on Iran and the second front of the Israel conflict, particularly in relation to Gaza.
 
-### 3. Keyword Analysis - Genocide, Palestine and War Crimes
+#### 3. Keyword Analysis - Genocide, Palestine and War Crimes
 
 Examining the amounts of times where Genocide (Genozid), Palestine (Palästina) and War Crimes (Kriegsverbrechen) were mentioned throughout the examined time period is highly interesting, as it provides an idea of the level of legitimacy each source prescribes to the Palestinian cause, regardless of the nature of the reporting. The results of the individual news outlets are presented below. 
 
@@ -155,11 +157,11 @@ Regarding the word Genocide, the BILD exhibits the highest peak of mentions  sur
 With the exception of BILD, most newspapers appear more willing to use the term Palestine than Genocide throughout the year. Several outlets show peaks in Palestine mentions that align with Genocide-related trends only in the cases of Die Welt and Süddeutsche Zeitung. In contrast, taz refers to Palestine far more frequently on average, with mentions surpassing 1.3 per article at certain points, yet these references show only a weak correlation with Genocide, indicating that the newspaper may draw this connection less often. While some outlets, such as taz and Frankfurter Rundschau, mention Palestine most often around May 2024 during the request for Netanyahu’s arrest warrant, others, like Die Welt and Süddeutsche Zeitung, do so in September 2024, coinciding with the UN GA resolution genocide ruling.    
 Lastly, concerning the words War Crimes all newspapers show very few mentions, with the BILD exclusively mentioning these words in spring 2024. The only noticeable peak that is visible across all other newspapers appears at the end of 2024, likely as a consequence of the UN GA resolution on the genocide ruling in September 2024.
 
-### 4. Contextual Analysis - Entity Context Window Analysis 
+#### 4. Contextual Analysis - Entity Context Window Analysis 
 
 In a final step, we conducted an analysis examining which nouns most frequently appear before and after Genocide as well as the respective conflict parties, as defined in the methodology, in the articles of each news outlet. Results are not reported for the entities UNRWA and ICC, as these topics were not mentioned frequently enough to produce reliable data. The same applies to the Israeli army, which was therefore included under the broader entity Israel in the analysis. In the section on the respective conflict parties, Bild was not included in the analysis, as the limited number of articles did not provide sufficient data to yield meaningful results.
 
-#### A. Genocide
+##### A. Genocide
 
 Die Welt
 
@@ -185,7 +187,7 @@ Analysis
 
 For Die Welt, the nouns most commonly appearing in the context of Genocide are land, October, and Palestinians. To a lesser extent, terms such as apartheid, Jews, and Israelis are also mentioned. This suggests that the term Genocide is primarily discussed within temporal and geographical frames (such as the month of October and the notion of land), and in relation to its impact on the Palestinian side. In the case of Süddeutsche Zeitung, the topic of apartheid appears more frequently, likely in relation to South Africa’s case at the ICJ mentioned earlier. Particularly notable is the recurrence of words such as terms, word, and procedure, which suggests that the SZ places an emphasis on the legal and definitional process through which the label of Genocide is determined and established. In the reporting of the Frankfurter Rundschau, the dominant terms surrounding the concept of Genocide are campus, police, protests, and state security, which suggests that the focus was placed on student protests against Israel and accusations of Genocide in the Gaza Strip. In the case of the taz, the dominant terms surrounding the notion of Genocide were cleansing, settlers, and apartheid. This indicates that the newspaper placed a strong emphasis on describing and thematizing the specific acts and defining characteristics of Genocide in its reporting. Ultimately, the coverage by Bild primarily focuses on terms like applause, highlight, festival, and Berlinale. This suggests that the outlet's limited reporting on the topic of Genocide was skewed by the incident at the Berlinale in February 2025, when a director attributed partial responsibility for the alleged Genocide in Gaza to the German state.
 
-#### B. Parties to the Conflict
+##### B. Parties to the Conflict
 
 Die Welt
 
@@ -207,21 +209,21 @@ Analysis
 
 In summary, it can be concluded that the analysis does not yield different results for the actor Iran. However, the word analysis shows that the left-wing Frankfurter Rundschau and the system-critical taz apply less critical terms to Hamas compared to their pendants. Instead, they focus on topics such as solidarity, which are not present in the reporting of Welt and Süddeutsche Zeitung. These outlets show a more critical stance towards Hamas and primarily emphasize the regional and international dimensions of the conflict in relation to Netanyahu and Israel, whereas the analysis of taz and Frankfurter Rundschau showed more condemnatory nouns such as perpetrator or failure, or a direct connection to the Gaza Strip. Since Task 2 allowed for the conclusion that reporting on Gaza Strip here was often connected to humanitarian or state-related issues, voiced criticism towards the entities Israel and Netanjahu seems further possible.
 
-### Interpretation
+#### Interpretation
 
 While Part 1 (article volume and trend by source) and Part 3 (keyword analysis) did not reveal any clear or consistent patterns regarding how news coverage varies depending on the political orientation of each outlet, and even demonstrated considerable overlap in terminology and focus across ideologically diverse media, Parts 2 and 4 of the analysis did produce more differentiated results.  
 In Part 2, topic modeling was used to identify thematic structures within each outlet’s reporting. Here, a notable trend emerged: the further left-leaning or system-critical a publication was, the more frequently and prominently it addressed topics directly related to Palestine, the Gaza Strip, and humanitarian consequences of the conflict. For example, Frankfurter Rundschau and taz linked Gaza Strip to terms such as children, families, West Bank, and Palestinians, suggesting a focus on civilian suffering and statehood. These outlets also often associated Germany with these terms, indicating a critical reflection on Germany’s position and responsibilities within the conflict. In contrast, more conservative outlets like Die Welt and Süddeutsche Zeitung showed a stronger focus on hostage situations, Iran, and other international geopolitical actors. such as Hezbollah, and the United States, suggesting that these outlets contextualize the conflict more in terms of security, regional power dynamics, and global diplomacy. Notably, mentions of Gaza and Palestine appeared mainly in association with hostages, rather than with humanitarian or statehood discourses.  
 Part 4, the contextual noun analysis, supported and deepened these findings. When examining the nouns surrounding terms like genocide, as well as named conflict actors such as Israel, Hamas, Iran, and Netanyahu, further distinctions became evident. Conservative outlets tended to frame Hamas in a more critical or militant context, often accompanied by words like hostages, conflict, or rebels. Meanwhile, Israel was typically discussed in institutional or geopolitical terms, frequently linked to state, Jews, or regime. By contrast, taz and Frankfurter Rundschau placed more emphasis on protest movements, solidarity actions, and terminology like apartheid, settlements, and cleansing, particularly in the context of genocide. This implies a more active engagement with moral discourse, as well as a higher degree of skepticism toward Israeli narratives. Even in the treatment of actors like Netanyahu or Iran, ideological positioning seemed to shape the discourse. While all outlets acknowledged Iran's role in the broader conflict, the extent and framing of Netanyahu varied: conservative outlets emphasized his central position in a conflict with an international dimension, critical-left outlets linked the Prime Minister more often to words like detention of responsibility.   
 
-# Part 2 - Attribution Analysis: Detecting Blame and Criticism
+## Part 2 - Attribution Analysis: Detecting Blame and Criticism
 
-## Objective
+### Objective
 
 The objective of our attribution analysis is to identify how blame and criticism have been assigned - both explicitly and implicitly - to specific actors and entities in the reporting on the war in Gaza across the selected German media outlets. 
 
 While the analysis does not seek to determine whether newspapers intentionally disseminate these criticisms and accusations, it does detect acts of quoting, amplifying or highlighting critical voices, which constitute an indirect form of attribution of responsibility. The aim is therefore to uncover and compare these discursive mechanisms of reproach across different outlets to better understand the differential roles German media outlets play in constructing and shaping narratives around accountability. 
 
-## Methodology
+### Methodology
 
 Entity Identification: According to our personal judgment on their relevance to the conflict, we selected different key entities that might be subject to blame or criticism. These included (1) state entities (Israel, Iran), (2) armed groups and military actors (Hamas, Israel Defense Forces), (3) political leaders (Netanyahu, Gallant), and (4) international bodies (UNRWA, ICC). For each entity, we included multiple variations of their names or references as they might appear in German media and then organized them into standardized categories, enabling consistent analysis. 
 
@@ -229,34 +231,34 @@ Linguistic Pattern Recognition: To detect language patterns indicating blame or 
 
 Sentence Extraction and Comparative Analysis:  For each article, our system split the text into individual sentences and applied both pattern matching and dependency parsing to each sentence. It then detected sentences containing blame attribution to our target entities and categorized which entities were being blamed in each instance. For instance, in a sentence like: “Ein Minister warf der Hamas Versagen vor” (“A minister accused Hamas of failure”), the parser would identify Hamas as the target of vorwerfen (“accuse”) and thus log a blame instance for Hamas. These sentences were then aggregated by entity and source and lastly normalized to allow for comparisons across different news outlets.
 
-## Limitations
+### Limitations
 
 While our analysis aims to uncover how blame and criticism are assigned - explicitly and implicitly - across different German media outlets, it is important to recognize the methodological limits of this approach. While our focus on attribution, rather than intention, allows us to map how narratives of accountability appear across different German sources, our model does not systematically capture criticism expressed directly by the newspaper’s 
 editorial voice. As a result, forms of more overt or unmediated criticism may go undetected, while the presence of many attributed statements may reflect a cautious or distanced reporting style. Furthermore, the model occasionally misattributed blame due to its inability to interpret the broader context or rhetorical purpose of a quotation. Thus, a core limitation of our approach is that while we capture the presence and frequency of attributed criticism, we do not always distinguish whether these attributions function to amplify, distance from or delegitimize the critical statement. 
 
 ➡️ The code for this analysis can be found here: **[Attribution Analysis](https://colab.research.google.com/drive/103J5nzC6EtNiOLtPc7p3ViYIBj9XJjCD?usp=sharing)** 
 
-## Discussion of Results
+### Discussion of Results
 
-### 1. General Findings
+#### 1. General Findings
 
 Across all media outlets we analysed, the balance of blame suggests that much of the press disscourse - regardless of political orientation - placed a strong focus on Israeli actions. In fact, Israel was the most frequently blamed actor, appearing in 57.1 % of all blame attributions (425 instances), (see **figure 1**). Whilst the data does not suggest Israel being depicted as the sole villain in media, it reflects that many commentaries dealt with Israeli responsibilities, failures, or wrongdoings in the war. One reason for that could be that as the main and only state actor involved in the conflict, responding with military force, international scrutinity is drawn upon it, and German media outlets echoed that by reporting criticism of Israeli conduct with regards to civilian casualties, breakdown of ceasefires, etc. 
 
 Simultaneously, Hamas, as the opposing party in the war and initiator of the violence and other acts was clearly recognized as culpable with 25.1% of blame attributions (187 instances) across the corpus (see **figure 1**). Perhaps these instances were fewer because much more self-evident or were less frequently explicated in articles after the initial events. In fact, the data suggests that after the initial Hamas attack of Ocotber 7th 2023, the media conversation quickly shifted and broadened to hold Israel’s government accountable for its actions (e.g., security lapses, military escalations, humanitarian crises). This trend was consistent across outlets (see **figure 1**): in taz 55.5% of blame instances targeted Israel, and 29.8% targeted Hamas. Frankfurter Rundschau showed a similar split (60.3% Israel, 19.0% Hamas), as did Süddeutsche Zeitung (58.6% Israel, 23.3% Hamas). Even conservative outlets followed this pattern: Die Welt had 51.4% of its blame attributions directed at Israel versus 27.9% at Hamas.
 
 ![Figure 1: Blame Attribution Summary](https://github.com/robinmadani/gaza-research-project/blob/main/figure%201_attribution%20analysis.png)
-#### Figure 1
+##### Figure 1
 
-### 2. Media Outlet Comparison
+#### 2. Media Outlet Comparison
 
 ![Figure 2: FR & taz Comparison](https://github.com/robinmadani/gaza-research-project/blob/main/figure%201_attribution%20analysis.png)
-#### Figure 2
+##### Figure 2
 
-### 2.1 Frankfurter Rundschau & taz
+#### 2.1 Frankfurter Rundschau & taz
 
 When comparing outlets, we see nuances that correlate with their known editorial leanings. More progressive and left-leaning papers like the Frankfurter Rundschau and taz indeed devoted a larger share of blame to Israel relative to Hamas than did the right-leaning ones (see **figure 2**). FR, for instance, attributed over three times as many blame statements to Israel as to Hamas (60% vs. 19%), which would be consistent with a human-rights-oriented perspective that scrutinizes Israli actions heavily. Likewise, taz emphasized Israeli culpability, though given it also had significant amounts of Hamas blame, which points to a balanced critical coverage that does not exonerate Hamas role in the war. These patterns align with the expectations that progressive outlets would be more critical of the Israeli government’s conduct in the war while also condemning Hamas to a lesser extent. We safely assume this, because Israel’s use of violence numerically exceeds that of Hamas. This is exemplified with the Palestinian death toll exceeding the Israeli death toll by a factor of approximately 55 (Al-Jazeera, April 2025).
 
-### 2.2 Die Welt & BILD
+#### 2.2 Die Welt & BILD
 
 On the other side, we expected Die Welt and BILD, traditionally supportive of Israel, to emphasize Hamas and even Iran (in systemical rivalry with Israel), which would be in line with a conservative narrative that highlights threats Israel faces. Quite surprisingly, Die Welt still had slightly over half of its blame instances (51.4%) targeted at Israel itself (see **figure 2**), indicating that it indeed reported on Israeli responsibility, although the nature of this criticism cannot be determined - perhaps by quoting international voices or covering Israeli internal debates.
 
@@ -268,7 +270,7 @@ This shows that BILD content may contain statements blazing Israel not as endors
 
 Furthermore, the absence of more granular blame targets - such as Iran, the IDF, UNRWA, or Netanjahu - suggests a limited engagement with the broader complexity of the conflict. These omissions point to a preference for binary narratives (e.g., victim vs. perpetrator, good vs. evil) over more nuanced accounts. BILD tends to favor emotionally charged, populist framing, where engaging with institutional responsibilities or geopolitical context may be seen as detracting from its core messaging. The lack of criticism directed at figures like Netanjahu or the IDF likely reflects editorial constraints tied to BILD’s historically pro-Israel stance. With only 181 articles in total, and just 8 containing any blame attribution, BILD’s reporting appears notably shallow in scope, indicating a surface-level engagement likely shaped by editorial priorities.
 
-### 2.3 Süddeutsche Zeitung & Frankfurter Rundschau
+#### 2.3 Süddeutsche Zeitung & Frankfurter Rundschau
 
 Left-of-center outlets were consistently more critical of Israeli actions, as reflected in their higher share of blame attributions toward Israel. This aligns with their traditional editorial stances, which tend to advocate for de-escalation and emphasize human rights concerns. However, it is important to contextualize this within the broader media tone in Germany, which was marked by widespread solidarity with Israel across the political spectrum. Some commentators noted that newspapers “from left to right” appeared to follow a line of “unconditional support for Israel,” reflecting Germany’s historical and political responsibility stemming from the Holocaust (Byline Times, April 2023).
 
@@ -280,22 +282,22 @@ The data also suggests that Hamas’s culpability was rather treated as a given 
 
 While Israel’s role in the war evolved—from victim of terror attacks to active military actor—Hamas’s role was more clear and became discursively less prominent after the initial aggression. In contrast, discussions about responsibility for civilian suffering or political failures often involve explicit assignments of blame to Israeli authorities, hence getting counted more often. This could explain why even outlets strongly aligned with Israel still had numerous instances of blame directed at Israel – they were often discussing who is responsible for a ceasefire collapsing, or for a security oversight, etc., questions that by nature involve Israel’s role.
 
-### 2.4 Temporal Evolution of Blame
+#### 2.4 Temporal Evolution of Blame
 
 ![Figure 3: Timeline Overview](https://github.com/robinmadani/gaza-research-project/blob/main/figure%203_attribution%20analysis.png)  
-#### Figure 3
+##### Figure 3
 ![Figure 4](https://github.com/robinmadani/gaza-research-project/blob/main/figure%204_attribution%20analysis.png)
-#### Figure 4
+##### Figure 4
 ![Figure 5](https://github.com/robinmadani/gaza-research-project/blob/main/figure%204_attribution%20analysis.png)
-#### Figure 5
+##### Figure 5
 ![Figure 6](https://github.com/robinmadani/gaza-research-project/blob/main/figure%206_attribution%20analysis.png)
-#### Figure 6
+##### Figure 6
 ![Figure 7](https://github.com/robinmadani/gaza-research-project/blob/main/figure%207_attribution%20analysis.png)
-#### Figure 7
+##### Figure 7
 
 According to our timeline analysis (see **figure 3 to 7**) temporal trends further enlighten us on narrative shifts as the war evolves, however only allow us to make inferences about likely patterns, as we lack detailed timeline data per source. The overall trajectory hints at an initial convergence on blaming Hamas (for being the aggressor that started the war), followed by a sustained narrative of holding Israel accoutable for how the war was conducted. This temporal dynamic illustrates how responsibility is constructed in stages: from the initial cause vs. the ongoing course of events - and the German media tracked boht phases, with a notable emphasis on the latter in the long run.
 
-# Conclusion 
+## Conclusion 
 This two-part analysis offers a detailed investigation into how German media outlets reported on the Gaza conflict, focusing on both linguistic framing (Part 1) and the attribution of blame (Part 2). While article volume and keyword frequency (Part 1) showed relatively homogeneous coverage patterns across outlets—suggesting common responsiveness to key events—the topic modeling and contextual analyses revealed significant ideological distinctions. More conservative outlets like Die Welt and Süddeutsche Zeitung emphasized hostages, international actors, and regional geopolitics, whereas left-leaning and system-critical publications such as taz and Frankfurter Rundschau focused more heavily on humanitarian consequences, civilian life in Gaza, and Palestine’s political framing. These linguistic choices reflect diverging editorial lenses through which the conflict is contextualized.
 
 The attribution analysis (Part 2) further nuanced this picture by showing that despite overarching editorial alignments, all outlets—across the political spectrum—assigned substantial blame to Israel, particularly as the war progressed. This indicates a shared discursive shift from condemning Hamas’s initial aggression to scrutinizing Israel’s ongoing military actions and governance. Even traditionally pro-Israel outlets like BILD exhibited a high share of Israel-related blame attributions, although often through quoted or indirect criticism rather than explicit editorial condemnation. Meanwhile, Hamas’s role appeared to be treated as self-evident and thus received comparatively fewer explicit blame statements over time.
@@ -303,7 +305,7 @@ The attribution analysis (Part 2) further nuanced this picture by showing that d
 Taken together, the findings illustrate that while the surface-level reporting on the Gaza conflict may appear balanced or event-driven, underlying linguistic and narrative structures diverge significantly along ideological lines. They also show that critical narratives about Israeli conduct were not confined to left-leaning media but permeated broader coverage—albeit through varying degrees of editorial distancing or amplification. Ultimately, this analysis underscores the importance of examining not just what is reported, but how and through whose voice, to understand how accountability and legitimacy are discursively constructed in times of conflict.
 
 
-# Sources
+## Sources
 Abdelaty, R. M. (2025). Sprachgebrauch im medialen Kontext in Kriegszeiten: Eine medienlinguistische Untersuchung zum Gaza-Krieg (2023–2024). Bulletin of The Faculty of Languages & Translation, https://doi.org/10.21608/bflt.2025.421729.
 
 Al-Haq. Defending Human Rights in Palestine since 1979. “UN General Assembly Member States Must Stand Against Israel’s Occupation, Apartheid and Genocide.” Accessed May 8, 2025. https://www.alhaq.org/advocacy/24398.html.
