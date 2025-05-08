@@ -47,7 +47,7 @@ In the first step, 20 topics were generated for each news outlet using article-l
 
 Die Welt
 
-![Bild Topic-Modelling Welt] (https://github.com/robinmadani/gaza-research-project/blob/main/figure%201_topic%20modelling_rundschau.png)
+![Figure Topic Modelling](https://github.com/robinmadani/gaza-research-project/blob/main/figure%201_topic%20modelling_rundschau.png)
 
 A striking feature of Die Welt’s reporting is the prominence of the topic hostages, which frequently appears in connection with Iran. This suggests that the newspaper portrays the Iranian state as involved in the hostage situation. More broadly, Iran is mentioned across several topics, not only alongside hostages, but also in association with Hezbollah and Lebanon, which represent the second conflict front in the ongoing Israel conflict. Furthermore, Die Welt places strong emphasis on the international community, as entities such as Trump, USA, Germany, Russia, China, and Biden regularly appear within the same topics as direct conflict-related terms like hostages. Lastly, it is notable that terms such as Gaza Strip or Gaza are rarely featured as central topic elements. Furtermore, words like Palestinian are primarily used in the context of hostages or international actors, rather than in association with victimhood or state-related terminology. Concludingly, the media coverage seems to concentrate on the hostage situation as well as the international aspects of the conflict.
 
