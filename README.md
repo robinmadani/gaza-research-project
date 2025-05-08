@@ -117,7 +117,7 @@ Bild: SZ Keyword Analysis
 
 Frankfurter Rundschau
 
-Bild: Frankfurter Rundschau Keyword Analysis
+![Bild: Frankfurter Rundschau Keyword Analysis](https://github.com/robinmadani/gaza-research-project/blob/main/figure%206_topic%20modelling_appearance_rundschau.png)
 
 taz - die Tageszeitung
 
