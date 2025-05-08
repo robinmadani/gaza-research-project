@@ -59,7 +59,7 @@ In the case of the Süddeutsche Zeitung, a notable difference from Die Welt is t
 
 Frankfurter Rundschau
 
-![Bild: Topic-Modelling Frankfurter Rundschau] 
+![Bild: Topic-Modelling Frankfurter Rundschau](https://github.com/robinmadani/gaza-research-project/blob/main/figure%201_topic%20modelling_rundschau.png)
 
 The Frankfurter Rundschau presents a noticeably different thematic and linguistic profile compared to the previously discussed outlets. While topics such as hostages in connection with Palestinians, or the international community in relation to conflict-related terminology, continue to appear – albeit less dominantly – the focus in this newspaper shifts more clearly toward the Gaza Strip. The term Gaza surfaces more frequently and is notably accompanied by words such as Palestinians, side, land, and state. This suggests that the Frankfurter Rundschau offers greater linguistic space to the Palestinian perspective, and does so in a way that is not solely tied to hostage-related narratives. Germany and antisemitism continue to appear together as thematically linked elements, as was also the case in the Süddeutsche Zeitung and Die Welt. However, what distinguishes the Frankfurter Rundschau is a recurring pattern where terms such as life, Palestinian, Gaza Strip, and child co-occur in several topics. This points toward a more human-centered framing, suggesting that the humanitarian conditions in Gaza receive more explicit attention. Overall, the Frankfurter Rundschau seems to linguistically broaden the framing of the conflict by incorporating not only geopolitical and security-oriented narratives, but also those highlighting civilian life and suffering on the Palestinian side.
 
