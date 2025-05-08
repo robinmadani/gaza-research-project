@@ -33,11 +33,157 @@ Several limitations affected the implementation and scope of this analysis. Firs
 
 ### 1. Article Volume and Trend by Source
 
+To examine the extent of media coverage concerning the overlying issue, it is useful to carry out an analysis of the article volume and trends by the individual news sources. 
+
+Bild:Number of Articles per Month per Source
+
+The analysis above demonstrates that no individual media outlet represents a significant outlier in its trend of coverage concerning the conflict. Throughout the entire time period observed, the tabloid BILD has reported the least, while the Süddeutsche Zeitung has consistently covered the issue most extensively, closely followed by the taz. There was a small but visible peak of coverage following the request for an ICC arrest warrant for PM Netanyahu in May 2024 within all sources except the Süddeutsche Zeitung, and again a negligible increase in coverage following the anniversary of the start of the conflict. Concerning the latter, only the Süddeutsche Zeitung and Frankfurter Rundschau seemed to increase their coverage until january 2025, when the article volume reached another peak, but has not picked up significantly during South Africa’s application to the ICJ, arguing for an existence of a Genocide carried out by the Israel. Interestingly, all five news sources already exhibit a very steep decline in coverage a month after the October 7th attacks, and fluctuated around an approximately equally low level throughout the following year. All in all, while differing in general volume of coverage, the different news sources follow very similar trends, suggesting they were all objectively influenced by general events and do not display individual shifts in incident-related attitudes or priorities. 
+
 ### 2. Topic Modelling - Individual and Collective Analysis
+
+#### A. Article - Level Topic Modelling by Source
+
+In the first step, 20 topics were generated for each news outlet using article-level topic modelling. The results are presented in the following section, starting with the most conservative newspaper and proceeding toward the more leftist and system-critical ones—concluding with BILD, which is treated separately as a tabloid outlet.
+
+Die Welt
+
+Bild: Topic-Modelling Welt
+
+A striking feature of Die Welt’s reporting is the prominence of the topic hostages, which frequently appears in connection with Iran. This suggests that the newspaper portrays the Iranian state as involved in the hostage situation. More broadly, Iran is mentioned across several topics, not only alongside hostages, but also in association with Hezbollah and Lebanon, which represent the second conflict front in the ongoing Israel conflict. Furthermore, Die Welt places strong emphasis on the international community, as entities such as Trump, USA, Germany, Russia, China, and Biden regularly appear within the same topics as direct conflict-related terms like hostages. Lastly, it is notable that terms such as Gaza Strip or Gaza are rarely featured as central topic elements. Furtermore, words like Palestinian are primarily used in the context of hostages or international actors, rather than in association with victimhood or state-related terminology. Concludingly, the media coverage seems to concentrate on the hostage situation as well as the international aspects of the conflict.
+
+Süddeutsche Zeitung
+
+Bild: Topic-Modelling Süddeutsche Zeitung
+
+In the case of the Süddeutsche Zeitung, a notable difference from Die Welt is the significantly more frequent use of the terms Palestinians and Palestine, which appear far more prominently across the identified topics. However, despite this increased visibility, these terms are still predominantly embedded in contexts that focus on hostages or on international actors, including Trump, Erdogan, Biden, Iran, and Germany. Much like in Die Welt, there is no consistent linguistic framing of Palestine in terms of statehood, victimhood, or human suffering. Similarly, the term Gaza Strip does not appear as a central element in any of the topics derived from the analysis. More generally, the United States emerges as a recurring actor across the topic landscape, largely represented by the figures of Biden and Trump, suggesting that the newspaper frames the U.S. as a central party in the Gaza conflict. Similar to Die Welt, Germany is mentioned across several topics, often in connection with terms such as Jewish or antisemitism, indicating that the Süddeutsche Zeitung linguistically embeds the German state's historical and political responsibility in discussions related to the conflict.
+
+Frankfurter Rundschau
+
+Bild: Topic-Modelling Frankfurter Rundschau
+
+The Frankfurter Rundschau presents a noticeably different thematic and linguistic profile compared to the previously discussed outlets. While topics such as hostages in connection with Palestinians, or the international community in relation to conflict-related terminology, continue to appear – albeit less dominantly – the focus in this newspaper shifts more clearly toward the Gaza Strip. The term Gaza surfaces more frequently and is notably accompanied by words such as Palestinians, side, land, and state. This suggests that the Frankfurter Rundschau offers greater linguistic space to the Palestinian perspective, and does so in a way that is not solely tied to hostage-related narratives. Germany and antisemitism continue to appear together as thematically linked elements, as was also the case in the Süddeutsche Zeitung and Die Welt. However, what distinguishes the Frankfurter Rundschau is a recurring pattern where terms such as life, Palestinian, Gaza Strip, and child co-occur in several topics. This points toward a more human-centered framing, suggesting that the humanitarian conditions in Gaza receive more explicit attention. Overall, the Frankfurter Rundschau seems to linguistically broaden the framing of the conflict by incorporating not only geopolitical and security-oriented narratives, but also those highlighting civilian life and suffering on the Palestinian side.
+
+taz- die Tageszeitung
+
+Bild: Topic-Modelling taz
+
+The trend observed in the Frankfurter Rundschau becomes even more pronounced in the taz – die tageszeitung. Here, the Gaza Strip emerges as an even more central theme—not only in association with the hostage narrative, but especially in connection with words such as life, land, family, child, and Palestinians. Notably, the West Bank is also mentioned for the first time with higher frequency in connection to Gaza Strip, suggesting that the newspaper frames the conflict in a way that emphasizes the entirety of the Palestinian territories rather than focusing solely on Gaza. Another distinctive feature of the taz is the repeated co-occurrence of the term Jewish with references to the army. This implies that the Israeli side is also portrayed through the lens of military action, possibly signaling a more critical stance toward state violence and power. Furthermore, the word Germany appears in conjunction with life, child, Gaza Strip, and Palestinians, indicating that the role of the German state is linguistically positioned in relation to the fate and suffering of civilians in Gaza. This thematic and linguistic framing aligns with the taz's traditionally system-critical editorial stance and suggests a heightened sensitivity to humanitarian connected to geopolitical dimensions.
+
+BILD
+
+Bild: Topic-Modelling Bild
+
+A notable pattern in BILD’s coverage is the frequent inclusion of the topic of terrorism, a term with strong linguistic and emotional connotations, aligning with the paper’s characteristic tone. This framing often appears in connection with the term hostages, which may suggest an implicit condemnation of Hamas’ actions. Additionally, it is striking that in most topics related to the Gaza conflict, either Germany or Berlin appears prominently, indicating that BILD linguistically frames the German state as highly involved in the conflict. In the case of BILD, we limited our analysis to only 10 topics. This decision was due to the significantly lower number of published articles compared to the other outlets, which meant that generating a full set of 20 meaningful and distinct topics was not feasible. 
+
+#### B. Collective Topic Modelling - Weights Analysis per Topic
+
+As a second step, we conducted a cross-outlet topic analysis based on the merged dataset. By calculating the average topic distributions per source, we aimed to identify thematic differences in coverage across media outlets.
+
+Bild: Heatmap - Collective Topic-Modelling
+
+In order to draw meaningful conclusions from the analysis, particular attention should be paid to topics that display significant differences in representation across media outlets.
+
+Topic 4  
+
+Topic 4 is characterized by the frequent co-occurrence of terms such as Palestinian, Germany, life, state, and German government. In the heatmap, it is particularly notable that the left-leaning outlets, taz and Frankfurter Rundschau, score significantly higher on this topic compared to their counterparts. This observation supports the findings from the previous analysis, which highlighted that these two news outlets provided more extensive coverage of the topic of Palestine and Palestinians in a broader context, including issues related to daily life, state terminology, and the influence of the German government on Palestinian affairs.
+
+Topic 8  
+
+Topic 8 is characterized by the frequent co-occurrence of terms such as child, hostage, man, woman, house, family and life. For this topic, only Bild achieves a higher score, while other news outlets do not strongly represent it. This can be attributed to the fact that Bild employs simpler, more visual language, using straightforward terms to attract readers.
+
+Topic 10 
+
+Topic 10 is characterized by the frequent co-occurrence of terms such as gaza-strip, palestinian, government, army, state, land, westjordanland. Once again, a clear trend emerges: the more left-leaning and system-critical the news outlet, the higher the score. This aligns with the findings from the previous analysis, where newspapers with a more critical stance towards the establishment tended to report more extensively on the Gaza Strip including a stronger focus on state-related terminology, as well as discussions around Palestine and the West Bank. 
+
+Topic 11 
+
+Topic 11 is characterized by the frequent co-occurrence of terms such as Iran, USA, state, Arab, Qatar, president, government. Here, in contrast to the previous topics, a reversed pattern emerges: the more conservative the news source, the stronger the emphasis on this particular topic, with Die Welt being the most prominent. These results align with previous observations, where conservative news sources tend to focus more on the international geopolitical situation and highlight global actors. 
+
+Topic 19
+
+Topic 19 is characterized by the frequent co-occurrence of terms such as Iran, regime, land, Tehran, Hizbollah, Lebanon. As in the previous case, conservative news outlets score higher here as well. This observation aligns with the findings from the earlier analysis, where it was shown that these outlets place greater emphasis on Iran and the second front of the Israel conflict, particularly in relation to Gaza.
 
 ### 3. Keyword Analysis - Genocide, Palestine and War Crimes
 
+Examining the amounts of times where Genocide (Genozid), Palestine (Palästina) and War Crimes (Kriegsverbrechen) were mentioned throughout the examined time period is highly interesting, as it provides an idea of the level of legitimacy each source prescribes to the Palestinian cause, regardless of the nature of the reporting. The results of the individual news outlets are presented below. 
+
+Die Welt  
+
+Bild: Welt Keyword Analysis
+
+Süddeutsche Zeitung
+
+Bild: SZ Keyword Analysis
+
+Frankfurter Rundschau
+
+Bild: Frankfurter Rundschau Keyword Analysis
+
+taz - die Tageszeitung
+
+Bild: taz Keyword Analysis
+
+BILD
+
+Bild: BILD Keyword Analysis
+
+Analysis  
+
+Regarding the word Genocide, the BILD exhibits the highest peak of mentions  surrounding the time of South Africa’s Genocide ruling application in January 2024. For a tabloïd newspaper this is surprising. The taz and Die Welt also show a peak of coverage including the word in January 2024, suggesting that the issue was debated on both sides of the political spectrum. The SZ and the Frankfurter Rundschau demonstrate fewer and less intensive peaks of the word in general, and barely increase the coverage around the time of the ICJ request either expressing less interest in this legal controversy, or prefer to go around clear statements concerning Genocide alltogether. The BILD quickly stops reporting on issues surrounding Genocide completely, with the exception of september 2024. This coincides with the UN GA resolution which was passed at the end of this month, concerning the ICJ’s advisory opinion on Israel's actions in the Occupied Palestinian Territory. It takes the other newspapers a few weeks to report on the issue using the word Genocide, with the SZ using the word the most, followed by Die Welt and Frankfurter Runschau. All in all, the Welt exhibits more frequent peaks of mentions throughout the year than the taz, which only had one period where the word was mentioned strikingly often (January 2025). The Frankfurter Rundschau and SZ exhibit an overall smaller weaker position on the issue, with the word generally mentioned at fewer times with smaller peaks. While there are some times where all newspapers mention the word more often, there is less coherence among them throughout the year, with some newspapers exhibiting many peaks at various times, while others follow a very different (but not counter-indicative) trend.     
+With the exception of Bild, most newspapers appear more willing to use the term Palestine than Genocide throughout the year. Several outlets show peaks in Palestine mentions that align with Genocide-related trends only in the cases of Die Welt and Süddeutsche Zeitung. In contrast, taz refers to Palestine far more frequently on average, with mentions surpassing 1.3 per article at certain points, yet these references show only a weak correlation with Genocide, indicating that the newspaper may draw this connection less often. While some outlets, such as taz and Frankfurter Rundschau, mention Palestine most often around May 2024 during the request for Netanyahu’s arrest warrant, others, like Die Welt and Süddeutsche Zeitung, do so in September 2024, coinciding with the UN GA resolution genocide ruling.  
+Lastly, concerning the words War Crimes all newspapers show very few mentions, with the BILD exclusively mentioning these words in spring 2024. The only noticeable peak that is visible across all other newspapers appears at the end of 2024, likely as a consequence of the UN GA resolution on the genocide ruling in September 2024.
+
 ### 4. Contextual Analysis - Entity Context Window Analysis 
+
+In a final step, we conducted an analysis examining which nouns most frequently appear before and after Genocide as well as the respective conflict parties, as defined in the methodology, in the articles of each news outlet. Results are not reported for the entities UNRWA and ICC, as these topics were not mentioned frequently enough to produce reliable data. The same applies to the Israeli army, which was therefore included under the broader entity Israel in the analysis. In the section on the respective conflict parties, Bild was not included in the analysis, as the limited number of articles did not provide sufficient data to yield meaningful results.
+
+#### A. Genocide
+
+Die Welt
+
+Bild: Wordcloud Die Welt
+
+Süddeutsche Zeitung
+
+Bild: Wordcloud Süddeutsche Zeitung
+
+Frankfurter Rundschau
+
+Bild: Wordcloud Frankfurter Rundschau
+
+taz - die Tageszeitung
+
+Bild: Wordcloud taz
+
+BILD
+
+Bild: Wordcloud BILD
+
+Analysis
+
+For Die Welt, the nouns most commonly appearing in the context of Genocide are land, October, and Palestinians. To a lesser extent, terms such as apartheid, Jews, and Israelis are also mentioned. This suggests that the term Genocide is primarily discussed within temporal and geographical frames (such as the month of October and the notion of land), and in relation to its impact on the Palestinian side. In the case of Süddeutsche Zeitung, the topic of apartheid appears more frequently, likely in relation to South Africa’s case at the ICJ mentioned earlier. Particularly notable is the recurrence of words such as terms, word, and procedure, which suggests that the SZ places an emphasis on the legal and definitional process through which the label of Genocide is determined and established. In the reporting of the Frankfurter Rundschau, the dominant terms surrounding the concept of Genocide are campus, police, protests, and state security, which suggests that the focus was placed on student protests against Israel and accusations of Genocide in the Gaza Strip. In the case of the taz, the dominant terms surrounding the notion of Genocide were cleansing, settlers, and apartheid. This indicates that the newspaper placed a strong emphasis on describing and thematizing the specific acts and defining characteristics of Genocide in its reporting. Ultimately, the coverage by Bild primarily focuses on terms like applause, highlight, festival, and Berlinale. This suggests that the outlet's limited reporting on the topic of Genocide was skewed by the incident at the Berlinale in February 2025, when a director attributed partial responsibility for the alleged Genocide in Gaza to the German state.
+
+#### B. Parties to the Conflict
+
+Die Welt
+
+For Die Welt, Netanyahu is primarily associated with terms like civil war, Lebanon, world, Hezbollah response, law, and UN. This indicates a focus on the broader regional context and the political and legal dimensions of the conflict. The Hamas entity is frequently linked with Hezbollah, Iran, staff, Israel, conflict party, hostages, and Houthi rebels, suggesting a portrayal of Hamas as a key player in the regional and global dynamics of the conflict. The term Israel is predominantly associated with states, Jews, regime, millions, Hezbollah, and Egypt, pointing to a broader geopolitical narrative, which involves both religious and regional power struggles. For Iran, the most common associations are with Lebanon, Hezbollah, Tehran, militias, Syria, USA, and region, highlighting Iran's significant role in supporting proxy groups and its involvement in the Middle East.
+
+Süddeutsche Zeitung
+
+The Süddeutsche Zeitung presents a slightly different perspective, with Netanyahu being associated with end, east, October, Biden, officials, and Istanbul. This suggests a focus on political timelines and international diplomacy. The entity Hamas is most often linked to Israel, word, Palestine, group, Solomon, and men, emphasizing the ongoing ideological and territorial conflict. Comparable to Welt, Iran is linked to Hezbollah, Lebanon, Tehran, regime, region, and USA, showing similar patterns in terms of Iran’s support for non-state actors in the region. Israel is frequently connected with Germany, state, Iran, October, Jews, USA, Ukraine, and land, reflecting the intersection of European geopolitics and the conflict, as well as the broader international involvement.
+
+Frankfurter Rundschau
+
+The Frankfurter Rundschau focuses more on the political dimensions and individual responsibilities within the conflict. For Netanyahu, key terms include end, future, Israel, prime minister, failure, detention, responsibility, and victory, suggesting a critical stance on the Israeli leadership. Hamas is primarily associated with Houthi, militia, solidarity, Hezbollah, and container shipping, indicating a connection to other militant groups and regional logistical routes. As with other outlets, Iran is most frequently associated with Lebanon, Hezbollah, Israel, Syria, and USA, reflecting its central role in supporting proxy forces. Israel is linked to correspondence, perpetrators, military, police, Germany, and book, which suggests a more critical stance on the state's actions, with some focus on the international diplomatic and legal aspects of the conflict.
+
+taz - die Tageszeitung
+
+In the taz - die Tageszeitung, Netanyahu is often associated with October, timepoint, Israel, prime minister, and Gaza Strip, emphasizing the temporal and territorial elements of the conflict. Hamas is connected to Erdogan, Berlin, and student discussions, suggesting an international focus on the political and ideological solidarity with Palesine. For Iran, the key terms are Hezbollah, Lebanon, region, regime, USA, militias, Israel, and Syria, again reflecting a critical stance on Iran's influence and regional dynamics. Finally, Israel is associated with Palestine, USA, October, Jews, Israel, Gaza Strip, and world.
+
+Analysis
+
+In summary, it can be concluded that the analysis does not yield different results for the actor Iran. However, the word analysis shows that the left-wing Frankfurter Rundschau and the system-critical taz apply less critical terms to Hamas compared to their pendants. Instead, they focus on topics such as solidarity, which are not present in the reporting of Welt and Süddeutsche Zeitung. These outlets show a more critical stance towards Hamas and primarily emphasize the regional and international dimensions of the conflict in relation to Netanyahu and Israel, whereas the analysis of taz and Frankfurter Rundschau showed more condemnatory nouns such as perpetrator or failure, or a direct connection to the Gaza Strip. Since Task 2 allowed for the conclusion that reporting on Gaza Strip here was often connected to humanitarian or state-related issues, voiced criticism towards the entities Israel and Netanjahu seems further possible.
 
 ### Interpretation
 
@@ -128,3 +274,14 @@ While Israel’s role in the war evolved—from victim of terror attacks to acti
 #### Figure 7
 
 According to our timeline analysis (see **figure 3 to 7**) temporal trends further enlighten us on narrative shifts as the war evolves, however only allow us to make inferences about likely patterns, as we lack detailed timeline data per source. The overall trajectory hints at an initial convergence on blaming Hamas (for being the aggressor that started the war), followed by a sustained narrative of holding Israel accoutable for how the war was conducted. This temporal dynamic illustrates how responsibility is constructed in stages: from the initial cause vs. the ongoing course of events - and the German media tracked boht phases, with a notable emphasis on the latter in the long run.
+
+
+# Quellen
+
+Al-Haq  |  Defending Human rights in Palestine since 1979. « UN General Assembly Member States Must Stand Against Israel’s Occupation, Apartheid and Genocide ». Consulté le 8 mai 2025. https://www.alhaq.org/advocacy/24398.html.
+
+Kottasová, Ivana. « Exclusive Interview: ICC Prosecutor Seeks Arrest Warrants against Sinwar and Netanyahu for War Crimes over October 7 Attack and Gaza ». CNN, 20 mai 2024. https://www.cnn.com/2024/05/20/middleeast/icc-israel-hamas-arrest-warrant-war-crimes-intl. 
+
+« Order of 26 January 2024 | INTERNATIONAL COURT OF JUSTICE ». Consulté le 8 mai 2025. https://www.icj-cij.org/node/203447.
+
+« Staatsschutz ermittelt nach Völkermord-Vorwurf auf der Berlinale », 18 février 2025. https://www.rbb24.de/kultur/berlinale/beitraege/2025/staatsschutz-ermittelt-voelkermord-vorwurf-berlinale-regisseur-jun-li.html.
