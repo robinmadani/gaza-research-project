@@ -262,7 +262,7 @@ While Israel’s role in the war evolved—from victim of terror attacks to acti
 
 ![Figure 3: Timeline Overview](https://github.com/robinmadani/gaza-research-project/blob/main/figure%203_attribution%20analysis.png)  
 #### Figure 3
-![Figure 4](INSERT_IMAGE_PATH_HERE) 
+![Figure 4](https://github.com/robinmadani/gaza-research-project/blob/main/figure%204_attribution%20analysis.png)
 #### Figure 4
 ![Figure 5](INSERT_IMAGE_PATH_HERE)  
 #### Figure 5
