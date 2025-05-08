@@ -71,7 +71,7 @@ The trend observed in the Frankfurter Rundschau becomes even more pronounced in 
 
 BILD
 
-Bild: Topic-Modelling Bild
+![Bild: Topic-Modelling Bild](https://github.com/robinmadani/gaza-research-project/blob/main/figure%205_topic%20modelling_bild.png)
 
 A notable pattern in BILD’s coverage is the frequent inclusion of the topic of terrorism, a term with strong linguistic and emotional connotations, aligning with the paper’s characteristic tone. This framing often appears in connection with the term hostages, which may suggest an implicit condemnation of Hamas’ actions. Additionally, it is striking that in most topics related to the Gaza conflict, either Germany or Berlin appears prominently, indicating that BILD linguistically frames the German state as highly involved in the conflict. In the case of BILD, we limited our analysis to only 10 topics. This decision was due to the significantly lower number of published articles compared to the other outlets, which meant that generating a full set of 20 meaningful and distinct topics was not feasible. 
 
