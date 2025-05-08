@@ -79,7 +79,7 @@ A notable pattern in BILD’s coverage is the frequent inclusion of the topic of
 
 As a second step, we conducted a cross-outlet topic analysis based on the merged dataset. By calculating the average topic distributions per source, we aimed to identify thematic differences in coverage across media outlets.
 
-Bild: Heatmap - Collective Topic-Modelling
+![Bild: Heatmap - Collective Topic-Modelling](https://github.com/robinmadani/gaza-research-project/blob/main/figure%2012_collective%20topic%20modelling.png)
 
 In order to draw meaningful conclusions from the analysis, particular attention should be paid to topics that display significant differences in representation across media outlets.
 
