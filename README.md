@@ -1,3 +1,7 @@
+### Authors: Lilith Springer, Raffael Kögel, Clara Burkhardt, Robin Madani, Charlotte Scheufens 
+# Introduction 
+
+
 # Part 1 - Volume, Keyword and Contextual Analysis
 
 ## Objective
@@ -212,7 +216,7 @@ Sentence Extraction and Comparative Analysis:  For each article, our system spli
 While our analysis aims to uncover how blame and criticism are assigned - explicitly and implicitly - across different German media outlets, it is important to recognize the methodological limits of this approach. While our focus on attribution, rather than intention, allows us to map how narratives of accountability appear across different German sources, our model does not systematically capture criticism expressed directly by the newspaper’s 
 editorial voice. As a result, forms of more overt or unmediated criticism may go undetected, while the presence of many attributed statements may reflect a cautious or distanced reporting style. Furthermore, the model occasionally misattributed blame due to its inability to interpret the broader context or rhetorical purpose of a quotation. Thus, a core limitation of our approach is that while we capture the presence and frequency of attributed criticism, we do not always distinguish whether these attributions function to amplify, distance from or delegitimize the critical statement. 
 
-➡️ The code for this analysis can be found here: **[Attribution Analysis](https://colab.research.google.com/drive/103J5nzC6EtNiOLtPc7p3ViYIBj9XJjCD?usp=sharing)]** 
+➡️ The code for this analysis can be found here: **[Attribution Analysis](https://colab.research.google.com/drive/103J5nzC6EtNiOLtPc7p3ViYIBj9XJjCD?usp=sharing)** 
 
 ## Discussion of Results
 
