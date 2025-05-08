@@ -268,7 +268,7 @@ While Israel’s role in the war evolved—from victim of terror attacks to acti
 #### Figure 5
 ![Figure 6](https://github.com/robinmadani/gaza-research-project/blob/main/figure%206_attribution%20analysis.png)
 #### Figure 6
-![Figure 7](INSERT_IMAGE_PATH_HERE)
+![Figure 7](https://github.com/robinmadani/gaza-research-project/blob/main/figure%207_attribution%20analysis.png)
 #### Figure 7
 
 According to our timeline analysis (see **figure 3 to 7**) temporal trends further enlighten us on narrative shifts as the war evolves, however only allow us to make inferences about likely patterns, as we lack detailed timeline data per source. The overall trajectory hints at an initial convergence on blaming Hamas (for being the aggressor that started the war), followed by a sustained narrative of holding Israel accoutable for how the war was conducted. This temporal dynamic illustrates how responsibility is constructed in stages: from the initial cause vs. the ongoing course of events - and the German media tracked boht phases, with a notable emphasis on the latter in the long run.
