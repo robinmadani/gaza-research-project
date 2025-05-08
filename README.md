@@ -47,13 +47,13 @@ In the first step, 20 topics were generated for each news outlet using article-l
 
 Die Welt
 
-![Figure Topic Modelling](https://github.com/robinmadani/gaza-research-project/blob/main/figure%201_topic%20modelling_rundschau.png)
+![Bild Topic Modelling](https://github.com/robinmadani/gaza-research-project/blob/main/figure%201_topic%20modelling_rundschau.png)
 
 A striking feature of Die Welt’s reporting is the prominence of the topic hostages, which frequently appears in connection with Iran. This suggests that the newspaper portrays the Iranian state as involved in the hostage situation. More broadly, Iran is mentioned across several topics, not only alongside hostages, but also in association with Hezbollah and Lebanon, which represent the second conflict front in the ongoing Israel conflict. Furthermore, Die Welt places strong emphasis on the international community, as entities such as Trump, USA, Germany, Russia, China, and Biden regularly appear within the same topics as direct conflict-related terms like hostages. Lastly, it is notable that terms such as Gaza Strip or Gaza are rarely featured as central topic elements. Furtermore, words like Palestinian are primarily used in the context of hostages or international actors, rather than in association with victimhood or state-related terminology. Concludingly, the media coverage seems to concentrate on the hostage situation as well as the international aspects of the conflict.
 
 Süddeutsche Zeitung
 
-![Bild Topic-Modelling Süddeutsche Zeitung]
+![Bild Topic-Modelling Süddeutsche Zeitung](
 
 In the case of the Süddeutsche Zeitung, a notable difference from Die Welt is the significantly more frequent use of the terms Palestinians and Palestine, which appear far more prominently across the identified topics. However, despite this increased visibility, these terms are still predominantly embedded in contexts that focus on hostages or on international actors, including Trump, Erdogan, Biden, Iran, and Germany. Much like in Die Welt, there is no consistent linguistic framing of Palestine in terms of statehood, victimhood, or human suffering. Similarly, the term Gaza Strip does not appear as a central element in any of the topics derived from the analysis. More generally, the United States emerges as a recurring actor across the topic landscape, largely represented by the figures of Biden and Trump, suggesting that the newspaper frames the U.S. as a central party in the Gaza conflict. Similar to Die Welt, Germany is mentioned across several topics, often in connection with terms such as Jewish or antisemitism, indicating that the Süddeutsche Zeitung linguistically embeds the German state's historical and political responsibility in discussions related to the conflict.
 
@@ -65,7 +65,7 @@ The Frankfurter Rundschau presents a noticeably different thematic and linguisti
 
 taz- die Tageszeitung
 
-Bild: Topic-Modelling taz
+![Bild: Topic-Modelling taz](https://github.com/robinmadani/gaza-research-project/blob/main/figure%202_topic%20modelling_taz.png)
 
 The trend observed in the Frankfurter Rundschau becomes even more pronounced in the taz – die tageszeitung. Here, the Gaza Strip emerges as an even more central theme—not only in association with the hostage narrative, but especially in connection with words such as life, land, family, child, and Palestinians. Notably, the West Bank is also mentioned for the first time with higher frequency in connection to Gaza Strip, suggesting that the newspaper frames the conflict in a way that emphasizes the entirety of the Palestinian territories rather than focusing solely on Gaza. Another distinctive feature of the taz is the repeated co-occurrence of the term Jewish with references to the army. This implies that the Israeli side is also portrayed through the lens of military action, possibly signaling a more critical stance toward state violence and power. Furthermore, the word Germany appears in conjunction with life, woman, child, Gaza Strip, and Palestinians, indicating that the role of the German state is linguistically positioned in relation to the fate and suffering of civilians in Gaza. This thematic and linguistic framing aligns with the taz's traditionally system-critical editorial stance and suggests a heightened sensitivity to humanitarian connected to geopolitical dimensions.
 
