@@ -1,0 +1,81 @@
+# Part 2 - Attribution Analysis: Detecting Blame and Criticism
+
+## Objective
+
+The objective of our attribution analysis is to identify how blame and criticism have been assigned - both explicitly and implicitly - to specific actors and entities in the reporting on the war in Gaza across the selected German media outlets. 
+
+While the analysis does not seek to determine whether newspapers intentionally disseminate these criticisms and accusations, it does detect acts of quoting, amplifying or highlighting critical voices, which constitute an indirect form of attribution of responsibility. The aim is therefore to uncover and compare these discursive mechanisms of reproach across different outlets to better understand the differential roles German media outlets play in constructing and shaping narratives around accountability. 
+
+## Methodology
+
+Entity Identification: According to our personal judgment on their relevance to the conflict, we selected different key entities that might be subject to blame or criticism. These included (1) state entities (Israel, Iran), (2) armed groups and military actors (Hamas, Israel Defense Forces), (3) political leaders (Netanyahu, Gallant), and (4) international bodies (UNRWA, ICC). For each entity, we included multiple variations of their names or references as they might appear in German media and then organized them into standardized categories, enabling consistent analysis. 
+
+Linguistic Pattern Recognition: To detect language patterns indicating blame or criticism, we used several complementary approaches. These included the creation of specific regular expression patterns, designed to capture German grammatical constructions and extensive lists of German verbs and keywords signaling blame or criticism. Moreover, we ensured to account for German grammatical variations, gender agreement, and tense forms to ensure comprehensive coverage. Finally, using the German language model from spaCy (de_core_news_md), we performed dependency parsing to analyze the grammatical structure of sentences, allowing us to identify when target entities where objects of blame verbs as well as to detect more complex blame constructions. 
+
+Sentence Extraction and Comparative Analysis:  For each article, our system split the text into individual sentences and applied both pattern matching and dependency parsing to each sentence. It then detected sentences containing blame attribution to our target entities and categorized which entities were being blamed in each instance. For instance, in a sentence like: “Ein Minister warf der Hamas Versagen vor” (“A minister accused Hamas of failure”), the parser would identify Hamas as the target of vorwerfen (“accuse”) and thus log a blame instance for Hamas. These sentences were then aggregated by entity and source and lastly normalized to allow for comparisons across different news outlets.
+
+## Limitations
+
+While our analysis aims to uncover how blame and criticism are assigned - explicitly and implicitly - across different German media outlets, it is important to recognize the methodological limits of this approach. While our focus on attribution, rather than intention, allows us to map how narratives of accountability appear across different German sources, our model does not systematically capture criticism expressed directly by the newspaper’s 
+editorial voice. As a result, forms of more overt or unmediated criticism may go undetected, while the presence of many attributed statements may reflect a cautious or distanced reporting style. Furthermore, the model occasionally misattributed blame due to its inability to interpret the broader context or rhetorical purpose of a quotation. Thus, a core limitation of our approach is that while we capture the presence and frequency of attributed criticism, we do not always distinguish whether these attributions function to amplify, distance from or delegitimize the critical statement. 
+
+➡️ The code for this analysis can be found here: **[LINK]**
+
+## Discussion of Results
+
+### 1. General Findings
+
+Across all media outlets we analysed, the balance of blame suggests that much of the press disscourse - regardless of political orientation - placed a strong focus on Israeli actions. In fact, Israel was the most frequently blamed actor, appearing in 57.1 % of all blame attributions (425 instances), (see **figure 1**). Whilst the data does not suggest Israel being depicted as the sole villain in media, it reflects that many commentaries dealt with Israeli responsibilities, failures, or wrongdoings in the war. One reason for that could be that as the main and only state actor involved in the conflict, responding with military force, international scrutinity is drawn upon it, and German media outlets echoed that by reporting criticism of Israeli conduct with regards to civilian casualties, breakdown of ceasefires, etc. 
+
+Simultaneously, Hamas, as the opposing party in the war and initiator of the violence and other acts was clearly recognized as culpable with 25.1% of blame attributions (187 instances) across the corpus (see **figure 1**). Perhaps these instances were fewer because much more self-evident or were less frequently explicated in articles after the initial events. In fact, the data suggests that after the initial Hamas attack of Ocotber 7th 2023, the media conversation quickly shifted and broadened to hold Israel’s government accountable for its actions (e.g., security lapses, military escalations, humanitarian crises). This trend was consistent across outlets (see **figure 1**): in taz 55.5% of blame instances targeted Israel, and 29.8% targeted Hamas. Frankfurter Rundschau showed a similar split (60.3% Israel, 19.0% Hamas), as did Süddeutsche Zeitung (58.6% Israel, 23.3% Hamas). Even conservative outlets followed this pattern: Die Welt had 51.4% of its blame attributions directed at Israel versus 27.9% at Hamas.
+
+![Figure 1: Blame Attribution Summary](INSERT_IMAGE_PATH_HERE)
+#### Figure 1
+
+### 2. Media Outlet Comparison
+
+![Figure 2: FR & taz Comparison](INSERT_IMAGE_PATH_HERE)
+#### Figure 2
+
+### 2.1 Frankfurter Rundschau & taz
+
+When comparing outlets, we see nuances that correlate with their known editorial leanings. More progressive and left-leaning papers like the Frankfurter Rundschau and taz indeed devoted a larger share of blame to Israel relative to Hamas than did the right-leaning ones (see **figure 3**). FR, for instance, attributed over three times as many blame statements to Israel as to Hamas (60% vs. 19%), which would be consistent with a human-rights-oriented perspective that scrutinizes Israli actions heavily. Likewise, taz emphasized Israeli culpability, though given it also had significant amounts of Hamas blame, which points to a balanced critical coverage that does not exonerate Hamas role in the war. These patterns align with the expectations that progressive outlets would be more critical of the Israeli government’s conduct in the war while also condemning Hamas to a lesser extent. We safely assume this, because Israel’s use of violence numerically exceeds that of Hamas. This is exemplified with the Palestinian death toll exceeding the Israeli death toll by a factor of approximately 55 (Al-Jazeera, April 2025).
+
+### 2.2 Die Welt & BILD
+
+On the other side, we expected Die Welt and BILD, traditionally supportive of Israel, to emphasize Hamas and even Iran (in systemical rivalry with Israel), which would be in line with a conservative narrative that highlights threats Israel faces. Quite surprisingly, Die Welt still had slightly over half of its blame instances (51.4%) targeted at Israel itself (see **figure 2**), indicating that it indeed reported on Israeli responsibility, although the nature of this criticism cannot be determined - perhaps by quoting international voices or covering Israeli internal debates.
+
+We want to draw particular attention to the case of BILD. While it is known for its unwavering pro-Israel stance—mandated by its publisher Axel Springer, which requires editors to uphold Israel’s right to exist (Byline Times, November 2023)—BILD nonetheless recorded 91% of its blame attributions toward Israel. However, this figure is based on only eight articles and should be interpreted with caution. Given the low incidence of blame statements detected (only some 8 articles, and most references to Israel), this suggests that BILD’s own editorial voice avoided to attribute blame to Israel or Hamas in explicit terms. The instance that we did detect likely from BILD quoting others as for instance reporting on an anti-Israel slogan at a protest or reproducing a Hamas statement blaming Israel. We found evidence in the data accusing Netanjahu and “his Nazi-army” of killing hostages, which BILD frames as a “Täter-Opfer-Umkehr” (perpertrator-victim reversal) by terrorists: 
+
+“It also states in English: “The war criminal Netanyahu and his Nazi army killed them with rockets from Zionist warplanes.” A perpetrator-victim reversal, in which the terrorists attempt to blame Israel for the death of the hostages.”
+
+This shows that BILD content may contain statements blazing Israel not as endorsement but to condemn those very statements. On the contrary, the outlets’ single instance of blame directed at Hamas: “Die Hamas nutzt das unschuldige Lächeln, die Einheit der Familie als Waffe”, (“Hamas uses the innocent smile, the unity of the family, as a weapon.”), likely reflects BILD’s own condemnatory tone towards Hamas. We must understand the context of the data: the high proportion of blame towards Israel is only a trace of quoting adversarial narratives, not of BILD actually criticiszing Isarel in its own editorial voice. 
+
+Furthermore, the absence of more granular blame targets - such as Iran, the IDF, UNRWA, or Netanjahu - suggests a limited engagement with the broader complexity of the conflict. These omissions point to a preference for binary narratives (e.g., victim vs. perpetrator, good vs. evil) over more nuanced accounts. BILD tends to favor emotionally charged, populist framing, where engaging with institutional responsibilities or geopolitical context may be seen as detracting from its core messaging. The lack of criticism directed at figures like Netanjahu or the IDF likely reflects editorial constraints tied to BILD’s historically pro-Israel stance. With only 181 articles in total, and just 8 containing any blame attribution, BILD’s reporting appears notably shallow in scope, indicating a surface-level engagement likely shaped by editorial priorities.
+
+### 2.3 Süddeutsche Zeitung & Frankfurter Rundschau
+
+Left-of-center outlets were consistently more critical of Israeli actions, as reflected in their higher share of blame attributions toward Israel. This aligns with their traditional editorial stances, which tend to advocate for de-escalation and emphasize human rights concerns. However, it is important to contextualize this within the broader media tone in Germany, which was marked by widespread solidarity with Israel across the political spectrum. Some commentators noted that newspapers “from left to right” appeared to follow a line of “unconditional support for Israel,” reflecting Germany’s historical and political responsibility stemming from the Holocaust (Byline Times, April 2023).
+
+In that sense, the prevalence of Israeli-blame narratives may seem counterintuitive. Yet, this can be understood as a distinction between editorial stance and reportage: while most outlets upheld Israel’s right to defend itself following the October 7th attacks, their reporting did not shy away from documenting perceived failures or controversial actions by the Israeli government. For example, Süddeutsche Zeitung published an interview in which an Israeli citizen stated, “I don’t give Hamas the blame, I give my government the blame,” directly criticizing Israel’s security failings. Although the frequency of blame attributions does not necessarily reflect strong moral condemnation, it shows that even outlets broadly supportive of Israel were willing to include perspectives critical of its conduct—particularly regarding accountability for the war’s progression and its consequences.
+
+In sum, the media upheld Israel’s legitimacy and right to defend itself at the editorial level, yet reported extensively on the government’s accountability for the outcomes of the war. This produces a nuanced narrative in which Hamas is morally condemned for its initial aggression, while Israel is subjected to practical scrutiny for its conduct during and after the conflict. Whether the level of criticism directed at each actor corresponds to the actual moral severity of their political and military actions, however, remains an open question and cannot be determined from this data alone.
+
+The data also suggests that Hamas’s culpability was rather treated as a given and hence less frequently subject of editorial criticism. A reason for this could be that Hamas’ attack on October 7th was universally condemned across German media outlets and its clearly attributable role of initiator of the military confrontation, made it little necessary to assign blame for what was evident, beyond the initial reports on the attack. Instead, coverage quickly moved to Israel’s government. We argue that many blame attributions related to Hamas may have been phrased not as “blaming Hamas”, but as simple descriptions of Hamas’ acts (e.g., “Hamas attacks Israel”), that can be understood as factual statements, not as blame attributions in the linguistic sense captured by our method.
+
+While Israel’s role in the war evolved—from victim of terror attacks to active military actor—Hamas’s role was more clear and became discursively less prominent after the initial aggression. In contrast, discussions about responsibility for civilian suffering or political failures often involve explicit assignments of blame to Israeli authorities, hence getting counted more often. This could explain why even outlets strongly aligned with Israel still had numerous instances of blame directed at Israel – they were often discussing who is responsible for a ceasefire collapsing, or for a security oversight, etc., questions that by nature involve Israel’s role.
+
+### 2.4 Temporal Evolution of Blame
+
+![Figure 3: Timeline Overview](INSERT_IMAGE_PATH_HERE)  
+#### Figure 3
+![Figure 4](INSERT_IMAGE_PATH_HERE) 
+#### Figure 4
+![Figure 5](INSERT_IMAGE_PATH_HERE)  
+#### Figure 5
+![Figure 6](INSERT_IMAGE_PATH_HERE)
+#### Figure 6
+![Figure 7](INSERT_IMAGE_PATH_HERE)
+#### Figure 7
+
+According to our timeline analysis (see **figure 3 to 7**) temporal trends further enlighten us on narrative shifts as the war evolves, however only allow us to make inferences about likely patterns, as we lack detailed timeline data per source. The overall trajectory hints at an initial convergence on blaming Hamas (for being the aggressor that started the war), followed by a sustained narrative of holding Israel accoutable for how the war was conducted. This temporal dynamic illustrates how responsibility is constructed in stages: from the initial cause vs. the ongoing course of events - and the German media tracked boht phases, with a notable emphasis on the latter in the long run.
