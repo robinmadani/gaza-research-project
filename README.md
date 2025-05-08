@@ -1,3 +1,9 @@
+# Part 1 - Volume, Keyword and Contextual Analysis
+
+## Objective
+
+The objective of our volume, keyword, and contextual analysis is to determine how, and to what extent, different news outlets have reported on specific topics, as well as to identify the words that commonly appear in connection with these topics. This analysis serves as a foundation for understanding the contextual usage of keywords throughout our study. At this stage, the analysis does not yet allow for a precise interpretation of the semantic relationships between keywords and their context. However, it does reveal the underlying linguistic narratives through which specific topics are presented.
+
 # Part 2 - Attribution Analysis: Detecting Blame and Criticism
 
 ## Objective
