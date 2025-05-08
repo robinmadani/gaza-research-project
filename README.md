@@ -222,7 +222,7 @@ Across all media outlets we analysed, the balance of blame suggests that much of
 
 Simultaneously, Hamas, as the opposing party in the war and initiator of the violence and other acts was clearly recognized as culpable with 25.1% of blame attributions (187 instances) across the corpus (see **figure 1**). Perhaps these instances were fewer because much more self-evident or were less frequently explicated in articles after the initial events. In fact, the data suggests that after the initial Hamas attack of Ocotber 7th 2023, the media conversation quickly shifted and broadened to hold Israel’s government accountable for its actions (e.g., security lapses, military escalations, humanitarian crises). This trend was consistent across outlets (see **figure 1**): in taz 55.5% of blame instances targeted Israel, and 29.8% targeted Hamas. Frankfurter Rundschau showed a similar split (60.3% Israel, 19.0% Hamas), as did Süddeutsche Zeitung (58.6% Israel, 23.3% Hamas). Even conservative outlets followed this pattern: Die Welt had 51.4% of its blame attributions directed at Israel versus 27.9% at Hamas.
 
-![Figure 1: Blame Attribution Summary](INSERT_IMAGE_PATH_HERE)
+![Figure 1: Blame Attribution Summary](https://github.com/robinmadani/gaza-research-project/blob/main/figure%201_attribution%20analysis.png)
 #### Figure 1
 
 ### 2. Media Outlet Comparison
