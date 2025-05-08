@@ -7,13 +7,9 @@ The objective of our volume, keyword, and contextual analysis is to determine ho
 ## Methodology
 
 Article Volume and Trend by Source: In a first step, the reporting activity of individual news outlets is visualized over time using a line chart broken down by month. This allows for the analysis of both the volume and trend of coverage across the given time period.
-
 artikel_pro_monat = df.resample('M').size()
-
 artikel_pro_monat.plot()
-
 gesamt_article_count = df['full_article'].dropna().shape[0]
-
 Our objective here is to identify which events attracted the most attention of the individual newspaper outlets and thus triggered the publication of articles.
 
 # Part 2 - Attribution Analysis: Detecting Blame and Criticism
