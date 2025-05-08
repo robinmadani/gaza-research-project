@@ -227,7 +227,7 @@ Simultaneously, Hamas, as the opposing party in the war and initiator of the vio
 
 ### 2. Media Outlet Comparison
 
-![Figure 2: FR & taz Comparison](INSERT_IMAGE_PATH_HERE)
+![Figure 2: FR & taz Comparison](https://github.com/robinmadani/gaza-research-project/blob/main/figure%201_attribution%20analysis.png)
 #### Figure 2
 
 ### 2.1 Frankfurter Rundschau & taz
