@@ -113,7 +113,7 @@ Bild: Welt Keyword Analysis
 
 Süddeutsche Zeitung
 
-Bild: SZ Keyword Analysis
+![Bild: SZ Keyword Analysis](https://github.com/robinmadani/gaza-research-project/blob/main/figure%209_topic%20modelling_appearance_sz.png)
 
 Frankfurter Rundschau
 
