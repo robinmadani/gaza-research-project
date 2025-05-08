@@ -1,4 +1,4 @@
-# Examining Bias within German News Reporting on Gaza
+# Examining Bias within German News Reporting on the Gaza War
 
 #### Authors: Lilith Springer, Raffael Kögel, Clara Burkhardt, Robin Madani, Charlotte Scheufens 
 
