@@ -47,19 +47,19 @@ In the first step, 20 topics were generated for each news outlet using article-l
 
 Die Welt
 
-Bild: Topic-Modelling Welt
+![Bild Topic-Modelling Welt] (https://github.com/robinmadani/gaza-research-project/blob/main/figure%201_topic%20modelling_rundschau.png)
 
 A striking feature of Die Welt’s reporting is the prominence of the topic hostages, which frequently appears in connection with Iran. This suggests that the newspaper portrays the Iranian state as involved in the hostage situation. More broadly, Iran is mentioned across several topics, not only alongside hostages, but also in association with Hezbollah and Lebanon, which represent the second conflict front in the ongoing Israel conflict. Furthermore, Die Welt places strong emphasis on the international community, as entities such as Trump, USA, Germany, Russia, China, and Biden regularly appear within the same topics as direct conflict-related terms like hostages. Lastly, it is notable that terms such as Gaza Strip or Gaza are rarely featured as central topic elements. Furtermore, words like Palestinian are primarily used in the context of hostages or international actors, rather than in association with victimhood or state-related terminology. Concludingly, the media coverage seems to concentrate on the hostage situation as well as the international aspects of the conflict.
 
 Süddeutsche Zeitung
 
-Bild: Topic-Modelling Süddeutsche Zeitung
+![Bild Topic-Modelling Süddeutsche Zeitung]
 
 In the case of the Süddeutsche Zeitung, a notable difference from Die Welt is the significantly more frequent use of the terms Palestinians and Palestine, which appear far more prominently across the identified topics. However, despite this increased visibility, these terms are still predominantly embedded in contexts that focus on hostages or on international actors, including Trump, Erdogan, Biden, Iran, and Germany. Much like in Die Welt, there is no consistent linguistic framing of Palestine in terms of statehood, victimhood, or human suffering. Similarly, the term Gaza Strip does not appear as a central element in any of the topics derived from the analysis. More generally, the United States emerges as a recurring actor across the topic landscape, largely represented by the figures of Biden and Trump, suggesting that the newspaper frames the U.S. as a central party in the Gaza conflict. Similar to Die Welt, Germany is mentioned across several topics, often in connection with terms such as Jewish or antisemitism, indicating that the Süddeutsche Zeitung linguistically embeds the German state's historical and political responsibility in discussions related to the conflict.
 
 Frankfurter Rundschau
 
-Bild: Topic-Modelling Frankfurter Rundschau
+![Bild: Topic-Modelling Frankfurter Rundschau] 
 
 The Frankfurter Rundschau presents a noticeably different thematic and linguistic profile compared to the previously discussed outlets. While topics such as hostages in connection with Palestinians, or the international community in relation to conflict-related terminology, continue to appear – albeit less dominantly – the focus in this newspaper shifts more clearly toward the Gaza Strip. The term Gaza surfaces more frequently and is notably accompanied by words such as Palestinians, side, land, and state. This suggests that the Frankfurter Rundschau offers greater linguistic space to the Palestinian perspective, and does so in a way that is not solely tied to hostage-related narratives. Germany and antisemitism continue to appear together as thematically linked elements, as was also the case in the Süddeutsche Zeitung and Die Welt. However, what distinguishes the Frankfurter Rundschau is a recurring pattern where terms such as life, Palestinian, Gaza Strip, and child co-occur in several topics. This points toward a more human-centered framing, suggesting that the humanitarian conditions in Gaza receive more explicit attention. Overall, the Frankfurter Rundschau seems to linguistically broaden the framing of the conflict by incorporating not only geopolitical and security-oriented narratives, but also those highlighting civilian life and suffering on the Palestinian side.
 
