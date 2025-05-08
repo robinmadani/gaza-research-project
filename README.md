@@ -47,13 +47,13 @@ In the first step, 20 topics were generated for each news outlet using article-l
 
 Die Welt
 
-![Bild Topic Modelling](https://github.com/robinmadani/gaza-research-project/blob/main/figure%201_topic%20modelling_rundschau.png)
+![Bild Topic Modelling Welt](https://github.com/robinmadani/gaza-research-project/blob/main/figure%204_topic%20modelling_welt.png)
 
 A striking feature of Die Welt’s reporting is the prominence of the topic hostages, which frequently appears in connection with Iran. This suggests that the newspaper portrays the Iranian state as involved in the hostage situation. More broadly, Iran is mentioned across several topics, not only alongside hostages, but also in association with Hezbollah and Lebanon, which represent the second conflict front in the ongoing Israel conflict. Furthermore, Die Welt places strong emphasis on the international community, as entities such as Trump, USA, Germany, Russia, China, and Biden regularly appear within the same topics as direct conflict-related terms like hostages. Lastly, it is notable that terms such as Gaza Strip or Gaza are rarely featured as central topic elements. Furtermore, words like Palestinian are primarily used in the context of hostages or international actors, rather than in association with victimhood or state-related terminology. Concludingly, the media coverage seems to concentrate on the hostage situation as well as the international aspects of the conflict.
 
 Süddeutsche Zeitung
 
-![Bild Topic-Modelling Süddeutsche Zeitung](
+![Bild Topic-Modelling Süddeutsche Zeitung](https://github.com/robinmadani/gaza-research-project/blob/main/figure%203_topic%20modelling_sz.png)
 
 In the case of the Süddeutsche Zeitung, a notable difference from Die Welt is the significantly more frequent use of the terms Palestinians and Palestine, which appear far more prominently across the identified topics. However, despite this increased visibility, these terms are still predominantly embedded in contexts that focus on hostages or on international actors, including Trump, Erdogan, Biden, Iran, and Germany. Much like in Die Welt, there is no consistent linguistic framing of Palestine in terms of statehood, victimhood, or human suffering. Similarly, the term Gaza Strip does not appear as a central element in any of the topics derived from the analysis. More generally, the United States emerges as a recurring actor across the topic landscape, largely represented by the figures of Biden and Trump, suggesting that the newspaper frames the U.S. as a central party in the Gaza conflict. Similar to Die Welt, Germany is mentioned across several topics, often in connection with terms such as Jewish or antisemitism, indicating that the Süddeutsche Zeitung linguistically embeds the German state's historical and political responsibility in discussions related to the conflict.
 
@@ -109,7 +109,7 @@ Examining the amounts of times where Genocide (Genozid), Palestine (Palästina) 
 
 Die Welt  
 
-Bild: Welt Keyword Analysis
+![Bild: WELT Keyword Analysis](https://github.com/robinmadani/gaza-research-project/blob/main/figure%2011_topic%20modelling_appearance_welt.png)
 
 Süddeutsche Zeitung
 
@@ -125,7 +125,7 @@ taz - die Tageszeitung
 
 BILD
 
-Bild: BILD Keyword Analysis
+![Bild: BILD Keyword Analysis](https://github.com/robinmadani/gaza-research-project/blob/main/figure%2010_topic%20modelling_appearance_bild.png)
 
 Analysis  
 
@@ -141,23 +141,23 @@ In a final step, we conducted an analysis examining which nouns most frequently 
 
 Die Welt
 
-Bild: Wordcloud Die Welt
+![Bild: Wordcloud die Welt](https://github.com/robinmadani/gaza-research-project/blob/main/figure%2015_topic%20modelling_contextual%20analysis_welt.png)
 
 Süddeutsche Zeitung
 
-Bild: Wordcloud Süddeutsche Zeitung
+![Bild: Wordcloud Süddeutsche Zeitung](https://github.com/robinmadani/gaza-research-project/blob/main/figure%2013_topic%20modelling_contextual%20analysis_sz.png)
 
 Frankfurter Rundschau
 
-Bild: Wordcloud Frankfurter Rundschau
+![Bild: Wordcloud Frankfurter Rundschau](https://github.com/robinmadani/gaza-research-project/blob/main/figure%2014_topic%20modelling_contextual%20analysis_rundschau.png)
 
 taz - die Tageszeitung
 
-Bild: Wordcloud taz
+![Bild: Wordcloud taz](https://github.com/robinmadani/gaza-research-project/blob/main/figure%2017_topic%20modelling_contextual%20analysis_taz.png)
 
 BILD
 
-Bild: Wordcloud BILD
+![Bild: Wordcloud BILD](https://github.com/robinmadani/gaza-research-project/blob/main/figure%2016_topic%20modelling_contextual%20analysis_bild.png)
 
 Analysis
 
